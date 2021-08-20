@@ -1,0 +1,140 @@
+* {
+  font-family: "Arial";
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  background: rgb(250, 179, 218);
+  background: radial-gradient(
+    circle,
+    rgba(250, 179, 218, 1) 0%,
+    rgba(245, 177, 189, 1) 100%
+  );
+}
+
+header {
+  text-align: center;
+  display: flex;
+  width: min-content;
+  font-size: 50px;
+}
+#logo {
+  width: 100px;
+  height: auto;
+}
+#subtitle {
+  text-align: center;
+  font-size: 24px;
+}
+
+/* produt */
+.categoria {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.categoria__produto {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  text-align: center;
+}
+.categoria__produto h3 {
+  margin: 8px 4px auto 0;
+}
+.categoria__produto p {
+  margin: 8px 4px 16px;
+}
+
+.categoria__produto img {
+  width: 60%;
+  height: auto;
+  border-radius: 33%;
+  border: black solid 2px;
+}
+
+footer nav ul {
+  display: flex;
+  flex-flow: row;
+  justify-content: start;
+}
+
+footer nav ul ol {
+  display: flex;
+  align-items: center;
+}
+footer nav ul ol img {
+  width: 16px;
+  height: auto;
+}
+
+@media only screen and (min-width: 576px) {
+    #logo {
+    padding: 16px;
+    width: 100px;
+    height: auto;
+  }
+  #subtitle {
+    text-align: center;
+    font-size: 24px;
+  }
+
+/* produt */
+.categoria {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+.categoria__produto {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  text-align: center;
+}
+.categoria__produto h3 {
+  margin: 8px 4px auto 0;
+}
+.categoria__produto p {
+  margin: 8px 4px 16px;
+}
+
+.categoria__produto img {
+  width: 300px;
+  height: auto;
+  border-radius: 33%;
+  border: black solid 2px;
+}
+
+footer{
+  justify-content: flex-end;
+}
+
+footer nav ul {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+footer nav ul ol {
+  display: flex;
+  align-items: center;
+}
+footer nav ul ol img {
+  width: 16px;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
