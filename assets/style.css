@@ -1,140 +1,161 @@
+:root {
+  --primary: #a9a9a9;
+  --second: #caebf2;
+  --terceari: #ff3b3f;
+  --terceari-light: #ffb9ba;
+  --breath: 16px;
+}
 * {
-  font-family: "Arial";
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
 body {
   display: flex;
-  flex-direction: column;
-  justify-items: center;
-  background: rgb(250, 179, 218);
-  background: radial-gradient(
-    circle,
-    rgba(250, 179, 218, 1) 0%,
-    rgba(245, 177, 189, 1) 100%
-  );
+  flex-flow: column;
+  width: 100vw;
+  align-items: center;
+  background-color: var(--terceari-light);
 }
 
 header {
-  text-align: center;
-  display: flex;
-  width: min-content;
-  font-size: 50px;
+  height: auto;
+  margin-top: 2vh;
 }
+
+header div {
+  display: flex;
+  align-items: center;
+}
+header div strong {
+  padding-left: 10vw;
+  font-size: 32px;
+  font-style: oblique;
+  color: var(--primary);
+  padding: var(--breath);
+}
+
 #logo {
-  width: 100px;
-  height: auto;
-}
-#subtitle {
-  text-align: center;
-  font-size: 24px;
+  height: 10vh;
 }
 
-/* produt */
-.categoria {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-.categoria__produto {
+.categoria__produto div {
+  align-self: center;
+  width: 65vw;
   display: flex;
   flex-flow: column wrap;
-  align-items: center;
-  text-align: center;
-}
-.categoria__produto h3 {
-  margin: 8px 4px auto 0;
+  height: max-content;
+  background-color: black;
+  padding: 1vh;
+  margin: 1vh;
+  border-radius: 120px 120px 0 0;
 }
 .categoria__produto p {
-  margin: 8px 4px 16px;
+  padding: 1vw;
+  border-radius: 8px;
+  background-color: var(--terceari-light);
+}
+.categoria__produto h3 {
+  padding: 1vw;
+  color: var(--primary);
+  text-align: center;
+  font-size: 20px;
 }
 
-.categoria__produto img {
-  width: 60%;
-  height: auto;
-  border-radius: 33%;
-  border: black solid 2px;
+.categoria__produto div img {
+  width: 60vw;
+  align-self: center;
+  border-radius: 120px 120px 0 0;
 }
-
-footer nav ul {
-  display: flex;
-  flex-flow: row;
-  justify-content: start;
+.banner__midlle{
+  background-attachment: fixed;
+  background-image: url('https://istoe.com.br/wp-content/uploads/sites/14/2020/06/sexo.jpg');
+  background-size: cover;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 20vh;
 }
-
-footer nav ul ol {
+footer {
+  width: auto;
+  background: blanchedalmond;
+  padding: 2vw;
+  border-radius: 8px;
+  margin-bottom: 2vh;
+}
+footer section nav ul {
   display: flex;
   align-items: center;
 }
-footer nav ul ol img {
-  width: 16px;
-  height: auto;
+footer section nav ul ol a {
+  display: flex;
+  align-items: center;
+  padding: 0 8px 0 8px;
 }
 
-@media only screen and (min-width: 576px) {
-    #logo {
-    padding: 16px;
-    width: 100px;
+footer section nav ul ol img {
+  width: 4vh;
+}
+
+@media only screen and (min-width: 564px) {
+  body{
+    display: flex;
+    flex-flow: column;
+  }
+  header {
+    display: flex;
+    flex-flow: row wrap;
     height: auto;
+    margin-top: 2vh;
   }
-  #subtitle {
+  
+  header div {
+    display: flex;
+    align-items: center;
+  }
+  header div strong {
+    padding-left: 10vw;
+    font-size: 32px;
+    font-style: oblique;
+    color: var(--primary);
+    padding: var(--breath);
+  }
+  
+  #logo {
+    height: 10vh;
+  }
+  .categoria__produto{
+    display: flex;
+    flex-flow:wrap;
+    margin: 16px;
+    align-items: center;
+  }
+
+  .categoria__produto div {
+    align-self: center;
+    width: 22vw;
+    height: max-content;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: black;
+    margin: 2vh 2vw auto auto;
+    border-radius: 120px 120px 0 0;
+  }
+  .categoria__produto p {
+    padding: 1vw;
+    height: min-content;
+    border-radius: 8px;
+    background-color: var(--terceari-light);
+  }
+  .categoria__produto h3 {
+    padding: 1vw;
+    color: var(--primary);
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
   }
-
-/* produt */
-.categoria {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-}
-.categoria__produto {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  text-align: center;
-}
-.categoria__produto h3 {
-  margin: 8px 4px auto 0;
-}
-.categoria__produto p {
-  margin: 8px 4px 16px;
-}
-
-.categoria__produto img {
-  width: 300px;
-  height: auto;
-  border-radius: 33%;
-  border: black solid 2px;
-}
-
-footer{
-  justify-content: flex-end;
-}
-
-footer nav ul {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-}
-footer nav ul ol {
-  display: flex;
-  align-items: center;
-}
-footer nav ul ol img {
-  width: 16px;
-  height: auto;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  .categoria__produto div img {
+    width: 20vw;
+  }
 }
