@@ -1,22 +1,26 @@
 :root {
-  --primary: #a9a9a9;
-  --second: #caebf2;
-  --terceari: #ff3b3f;
-  --terceari-light: #ffb9ba;
+  --primary: #540100;
+  --second: #ff0000;
+  --terceari: #cb741d;
+  --quart: #ffb10a;
+  --quinte: #0c0100;
+  --sext: #ffb9ba;
   --breath: 16px;
 }
 * {
+  width: auto;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  width: fit-content;
   display: flex;
   flex-flow: column;
   width: 100vw;
   align-items: center;
-  background-color: var(--terceari-light);
+  background-color: var(--sext);
 }
 
 header {
@@ -28,6 +32,7 @@ header div {
   display: flex;
   align-items: center;
 }
+
 header div strong {
   padding-left: 10vw;
   font-size: 32px;
@@ -37,50 +42,48 @@ header div strong {
 }
 
 #logo {
-  height: 10vh;
+  height: 10vw;
+}
+
+.categoria {
+  display: flex;
+  justify-content: center;
 }
 
 .categoria__produto div {
-  align-self: center;
-  width: 65vw;
+  width: fit-content;
+  margin-top: 10px;
+  margin-bottom: 25px;
   display: flex;
-  flex-flow: column wrap;
-  height: max-content;
-  background-color: black;
-  padding: 1vh;
-  margin: 1vh;
-  border-radius: 120px 120px 0 0;
+  flex-direction: column;
+  align-items: center;
 }
 .categoria__produto p {
+  width: 80vw;
   padding: 1vw;
-  border-radius: 8px;
-  background-color: var(--terceari-light);
+  border-radius: 0 0 16px 16px;
+  color: var(--primary);
+  background-color: white;
 }
 .categoria__produto h3 {
-  padding: 1vw;
   color: var(--primary);
   text-align: center;
   font-size: 20px;
+  width: 80vw;
+  border: 2px solid var(--quinte);
+  margin: 2px;
 }
 
-.categoria__produto div img {
-  width: 60vw;
-  align-self: center;
-  border-radius: 120px 120px 0 0;
+.categoria__produto img {
+  width: 80vw;
+  border-radius: 50% 50% 0 0;
+  border: 2px solid var(--quinte);
 }
-.banner__midlle{
-  background-attachment: fixed;
-  background-image: url('https://istoe.com.br/wp-content/uploads/sites/14/2020/06/sexo.jpg');
-  background-size: cover;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  height: 20vh;
-}
+
 footer {
-  width: auto;
+  width: min-content;
   background: blanchedalmond;
-  padding: 2vw;
+  padding: 1vw;
   border-radius: 8px;
   margin-bottom: 2vh;
 }
@@ -99,63 +102,98 @@ footer section nav ul ol img {
 }
 
 @media only screen and (min-width: 564px) {
-  body{
-    display: flex;
-    flex-flow: column;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  header {
+
+  body {
     display: flex;
-    flex-flow: row wrap;
+    background-color: var(--sext);
+  }
+
+  header {
     height: auto;
     margin-top: 2vh;
   }
-  
+
   header div {
     display: flex;
     align-items: center;
   }
+
   header div strong {
     padding-left: 10vw;
-    font-size: 32px;
+    font-size: 128px;
     font-style: oblique;
     color: var(--primary);
     padding: var(--breath);
   }
-  
+
   #logo {
-    height: 10vh;
+    height: 5vw;
   }
-  .categoria__produto{
+
+  .categoria__produto {
     display: flex;
-    flex-flow:wrap;
-    margin: 16px;
+    flex-flow: row wrap;
     align-items: center;
+    justify-content: center;
   }
 
   .categoria__produto div {
-    align-self: center;
-    width: 22vw;
-    height: max-content;
-    display: flex;
-    flex-flow: column nowrap;
-    background-color: black;
-    margin: 2vh 2vw auto auto;
-    border-radius: 120px 120px 0 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    left: var(--breath);
+    right: var(--breath);
+    width: 25vw;
   }
-  .categoria__produto p {
-    padding: 1vw;
-    height: min-content;
-    border-radius: 8px;
-    background-color: var(--terceari-light);
-  }
+
   .categoria__produto h3 {
-    padding: 1vw;
     color: var(--primary);
     text-align: center;
-    font-size: 18px;
+    font-size: 1rem;
+    width: 18vw;
+    border: 2px solid var(--quinte);
+    margin: 2px;
   }
-  
-  .categoria__produto div img {
-    width: 20vw;
+
+  .categoria__produto p {
+    flex-grow: 1 0;
+    width: 18vw;
+    padding: 1vw;
+    border-radius: 0 0 16px 16px;
+    color: var(--primary);
+    background-color: white;
+    font-size: 1rem;
+  }
+
+  .categoria__produto img {
+    width: 18vw;
+    border-radius: 50% 50% 0 0;
+    border: 2px solid var(--quinte);
+  }
+
+  footer {
+    position: absolute;
+    top: 7vh;
+    left: 1vw;
+    background: transparent;
+    border: 2px solid var(--quinte);
+    border-radius: 8px;
+  }
+  footer section nav ul {
+    display: flex;
+    align-items: center;
+  }
+  footer section nav ul ol a {
+    display: flex;
+    align-items: center;
+    padding: 0 8px 0 8px;
+  }
+
+  footer section nav ul ol img {
+    width: 4vh;
   }
 }
