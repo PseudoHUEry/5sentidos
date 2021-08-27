@@ -57,6 +57,7 @@ header div strong {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .categoria__produto p {
   width: 80vw;
@@ -100,6 +101,22 @@ footer section nav ul ol a {
 footer section nav ul ol img {
   width: 4vh;
 }
+.categoria__produto span{
+  position: relative;
+}
+.categoria__produto h3[data-descr]:before {
+  position: absolute;
+  top: -5vh;
+  left: -0.8vw;
+  content: attr(data-descr);
+  background-color: var(--primary);
+  border-radius: 8px 0 8px 0;
+  color: white;
+  border: 1px solid var(--quinte);
+  width: fit-content;
+  padding: 5px;
+}
+
 
 @media only screen and (min-width: 564px) {
   * {
