@@ -1,0 +1,17 @@
+<section class="categoria">
+
+
+  <article class="categoria__produto">
+
+    <% for (item of banco) { %>
+
+    <div>
+      <img src= <%= item.img %> >
+      <span>
+        <h3 data-descr= <%= item.preco %> > <%= item.prod %> </h3>
+      </span>
+      <p> <%= item.desc %> </p>
+    </div>   
+    <% } &>
+    </article>
+</section>
